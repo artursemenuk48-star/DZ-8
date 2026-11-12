@@ -1,0 +1,11 @@
+import logging
+from datetime import datetime
+
+logging.basicConfig(level=logging.INFO,
+                    filename="logs.log",
+                    filemode="w",
+                    format="Поточне повідомлення логування:%(asctime)s:%(levelname)s - %(message)s")
+
+current_date = datetime.now().strftime("%Y-%m-%d")
+
+logging.info(current_date)
